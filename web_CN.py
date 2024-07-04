@@ -27,97 +27,65 @@ def img_to_base64(img_path):
     with open(img_path, "rb") as image_file:
         return base64.b64encode(image_file.read()).decode()
 
-# 添加自定义 CSS 样式
+# Add custom CSS for styling
 custom_css = """
     <style>
     body {
         background-color: #f0f8ff;
-        font-family: 'Microsoft YaHei', '微软雅黑', sans-serif;
+        font-family: 'Arial', sans-serif;
     }
     .reportview-container {
-        background: linear-gradient(to right, #e6f2ff, #ffffff);
+        background: white;
         padding: 20px;
-        border-radius: 15px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
     .title-container {
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-bottom: 20px;
-        background-color: rgba(0, 119, 190, 0.1);
-        padding: 20px;
-        border-radius: 10px;
+        margin-bottom: 30px;
     }
     .title-logo {
-        height: 50px;
-        margin-right: 15px;
+        height: 40px;
+        margin-right: 10px;
     }
     h1 {
-        color: #005a8c;
+        color: #0077be;
         font-weight: bold;
         margin: 0;
-        text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
     }
     .stButton>button {
-        background-color: #005a8c;
+        background-color: #0077be;
         color: white;
         font-weight: bold;
-        border-radius: 20px;
-        padding: 10px 20px;
-        transition: all 0.3s ease;
-    }
-    .stButton>button:hover {
-        background-color: #003d5c;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     }
     .upload-text {
-        font-size: 16px;
+        font-size: 18px;
         color: #333;
-        margin-bottom: 15px;
-        font-weight: 500;
+        margin-bottom: 10px;
     }
     .prediction {
-        font-size: 18px;
+        font-size: 20px;
         font-weight: bold;
-        color: #005a8c;
-        margin-top: 25px;
-        padding: 10px;
-        background-color: rgba(0, 119, 190, 0.1);
-        border-radius: 10px;
-        text-align: center;
+        color: #0077be;
+        margin-top: 20px;
     }
     .advice {
         font-style: italic;
-        color: #444;
-        margin-top: 14px;
-        padding: 10px;
-        background-color: #f9f9f9;
-        border-left: 5px solid #005a8c;
+        color: #555;
+        margin-top: 10px;
     }
     .image-container {
         display: flex;
         justify-content: space-between;
-        margin-top: 10px;
     }
     .image-column {
         width: 48%;
-        background-color: white;
-        padding: 10px;
-        border-radius: 10px;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-    .card {
-        background-color: white;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        margin-bottom: 20px;
     }
     </style>
     """
 st.markdown(custom_css, unsafe_allow_html=True)
-
 
 # Load and display logo with title
 logo_path = 'logo.png'
