@@ -16,7 +16,7 @@ hide_streamlit_style = """
     #MainMenu {visibility: hidden;}
     footer {visibility: hidden;}
     .stApp {
-        margin-top: -110px;
+        margin-top: -90px;
     }
     </style>
     """
@@ -104,7 +104,7 @@ else:
 
 def main():
     st.markdown('<p class="upload-text">上传一张CT图像进行分析:</p>', unsafe_allow_html=True)
-    file_uploaded = st.file_uploader('Choose an image...', type='png')
+    file_uploaded = st.file_uploader('选择图像文件...', type=['png', 'jpg', 'jpeg')
 
     if file_uploaded is not None:
         image = Image.open(file_uploaded).convert('RGB')
@@ -121,12 +121,12 @@ def main():
             st.write("热力图可视化:")
             st.image(heatmap, use_column_width=True)
 
-        st.markdown(f'<p class="prediction">Prediction: {result}</p>', unsafe_allow_html=True)
+        st.markdown(f'<p class="prediction">诊断结果: {result}</p>', unsafe_allow_html=True)
 
-        if result == 'Malignant':
-            st.markdown('<p class="advice">Please consult a doctor as soon as possible.</p>', unsafe_allow_html=True)
+        if result == '恶性':
+            st.markdown('<p class="advice">请尽快就医咨询专业医生的意见。</p>', unsafe_allow_html=True)
         else:
-            st.markdown('<p class="advice">The tumor is benign, but please consult a doctor for further advice.</p>',
+            st.markdown('<p class="advice">诊断结果为良性，但仍需咨询医生以获取进一步建议。</p>',
                         unsafe_allow_html=True)
 
 def extract_vgg16_features(image):
