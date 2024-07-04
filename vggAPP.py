@@ -104,7 +104,7 @@ else:
 
 def main():
     st.markdown('<p class="upload-text">Upload a CT Image for analysis:</p>', unsafe_allow_html=True)
-    file_uploaded = st.file_uploader('Choose an image...', type='png,jpg,jpeg')
+    file_uploaded = st.file_uploader('Choose an image...', type=['png', 'jpg', 'jpeg', 'gif', 'bmp'])
 
     if file_uploaded is not None:
         image = Image.open(file_uploaded).convert('RGB')
