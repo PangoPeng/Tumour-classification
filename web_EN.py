@@ -16,7 +16,7 @@ hide_streamlit_style = """
     #MainMenu {visibility: hidden;}
     footer {visibility: hidden;}
     .stApp {
-        margin-top: -110px;
+        margin-top: -90px;
     }
     </style>
     """
