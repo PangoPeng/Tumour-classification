@@ -51,7 +51,7 @@ custom_css = """
         margin-right: 10px;
     }
     h1 {
-        color: #005a8c;
+        color: #0077be;
         font-weight: bold;
         margin: 0;
         text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
