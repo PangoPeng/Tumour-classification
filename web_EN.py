@@ -47,7 +47,7 @@ custom_css = """
         margin-bottom: 30px;
     }
     .title-logo {
-        height: 30px;
+        height: 40px;
         margin-right: 10px;
     }
     h1 {
