@@ -101,7 +101,7 @@ if os.path.exists(logo_path):
     st.markdown(title_html, unsafe_allow_html=True)
 else:
     st.warning("Logo file not found. Please check the file path.")
-    st.markdown("<h1>肿瘤CT图像的良恶性诊断</h1>", unsafe_allow_html=True)
+    st.markdown("<h1>肿瘤CT的良恶性诊断</h1>", unsafe_allow_html=True)
 
 def main():
     st.markdown('<p class="upload-text">上传一张CT图像进行分析:</p>', unsafe_allow_html=True)
