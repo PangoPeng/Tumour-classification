@@ -156,7 +156,7 @@ def predict_class(image):
     features_reduced = reduce_features(features)
     prediction = model.predict(features_reduced)[0]
     heatmap = generate_gradcam(input_batch, prediction, image)
-    label = {0: 'Normal', 1: 'Love Brain'}
+    label = {0: 'Love Brain', 1: 'Love Brain'}
     final = label[prediction]
     return final, heatmap
 
