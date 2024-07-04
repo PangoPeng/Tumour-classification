@@ -51,9 +51,10 @@ custom_css = """
         margin-right: 10px;
     }
     h1 {
-        color: #0077be;
+        color: #005a8c;
         font-weight: bold;
         margin: 0;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
     }
     .stButton>button {
         background-color: #0077be;
