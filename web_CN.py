@@ -94,13 +94,13 @@ if os.path.exists(logo_path):
     title_html = f"""
     <div class="title-container">
         <img src="data:image/png;base64,{logo_base64}" class="title-logo">
-        <h1>肿瘤图像的良恶性诊断</h1>
+        <h1>胸腺瘤良恶性分类</h1>
     </div>
     """
     st.markdown(title_html, unsafe_allow_html=True)
 else:
     st.warning("Logo file not found. Please check the file path.")
-    st.markdown("<h1>肿瘤图像的良恶性诊断</h1>", unsafe_allow_html=True)
+    st.markdown("<h1>胸腺瘤良恶性分类</h1>", unsafe_allow_html=True)
 
 def main():
     st.markdown('<p class="upload-text">上传一张图像进行分析:</p>', unsafe_allow_html=True)
