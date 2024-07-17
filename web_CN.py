@@ -234,7 +234,7 @@ footer = """
 }
 </style>
 <div class="footer">
-    <p>Developed with ❤ by Xiayan Peng <a href="https://github.com/pangopeng" target="_blank"></a></p>
+    <p>Cure sometimes, treat often, comfort always. ❤<a href="https://github.com/pangopeng" target="_blank"></a></p>
 </div>
 """
 st.markdown(footer, unsafe_allow_html=True)
